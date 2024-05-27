@@ -16,7 +16,6 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
 </head>
 <body class="backgroundColor">
     <form runat="server">
@@ -41,8 +40,9 @@
             </Scripts>
         </asp:ScriptManager>
 
+    
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar navbar-inverse navbar-fixed-top">
 
             <div class="container">
                 <div class="navbar-header">

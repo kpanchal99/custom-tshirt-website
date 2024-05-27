@@ -7,20 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ecommerce_website.publicSite {
-    
-    
-    public partial class Default{
-        
+namespace ecommerce_website.publicSite
+{
+
+
+    public partial class Default
+    {
+
         /// <summary>
-        /// Repeater1 control.
+        /// Repeater2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
-        
+        protected global::System.Web.UI.WebControls.Repeater Repeater2;
+
         /// <summary>
         /// SqlDataSource1 control.
         /// </summary>

@@ -8,18 +8,24 @@
 
     <div class="productContainer">
 
-        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1" OnItemCreated="Repeater1_ItemCreated1">
-
-            <ItemTemplate>
-                <div class="product">
-                    <h2><%# Eval("name") %></h2>
-                    <asp:ImageButton ID="phImage" runat="server" style="height:350px; width:inherit" ImageUrl='<%# "uploads/productImages/" + Eval("image") %>'  OnCommand="Image_Click" CommandName="ImageClick" CommandArgument='<%# Eval("image") +" "+ Eval("price")%>'  />
-                    <%--<img style="height:350px; width:inherit" src='<%# "uploads/productImages/" + Eval("image") %>' />--%>
-                    <h2>Price: <%# Eval("price") %> Tk/=</h2>
+        <div class="container mt-5 d-flex" style="display:flex;flex-wrap:wrap;">
+    <asp:Repeater ID="Repeater2" runat="server" DataSourceID="SqlDataSource1" OnItemCreated="Repeater1_ItemCreated1">
+        <ItemTemplate>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <asp:ImageButton ID="phImage" runat="server" CssClass="card-img-top" style="height: 350px; object-fit: cover;" ImageUrl='<%# "uploads/productImages/" + Eval("image") %>' OnCommand="Image_Click" CommandName="ImageClick" CommandArgument='<%# Eval("image") + " " + Eval("price") %>' />
+                    <div class="card-body">
+                        <h5 class="card-title"><%# Eval("name") %></h5>
+                        <p class="card-text">₹ <%# Eval("price") %> /-</p>
+                    </div>
                 </div>
-            </ItemTemplate>
+            </div>
+        </ItemTemplate>
+  
+    </asp:Repeater>
+</div>
 
-        </asp:Repeater>
+
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ecommerce_website.Properties.Settings.MyCon %>" SelectCommand="SELECT [name], [id], [image], [price] FROM [vw_product]"></asp:SqlDataSource>
 
     </div>
